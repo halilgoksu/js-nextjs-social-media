@@ -2,6 +2,7 @@ import Link from "next/link";
 import { auth } from "../utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { BsFillPenFill } from "react-icons/bs";
+import Image from "next/image";
 
 
 export default function Nav() {
