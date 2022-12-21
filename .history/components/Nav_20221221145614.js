@@ -22,17 +22,16 @@ export default function Nav() {
             <a className="m-2 px-4 text-lg  text-black bg-white border-black border-4   rounded-lg font-medium ml-8">
               Join Now
             </a>
-    
           </Link>
         )}
         {user && (
           <div className="flex items-center gap-6">
             <Link href="/post">
-            <button className="bg-white btn btn-blue-500 hover:bg-blue-200 first-letter 
-             text-black font-bold py-2 px-4 rounded" type="submit">
-        Submit
-      </button>
-              
+              <button className="font-small bg-blue-300 text-black py-2 px-4 border-4 
+              rounded-full
+               textx-sm">
+                Post
+              </button>
             </Link>
             <Link href="/dashboard">
               <img
@@ -41,7 +40,6 @@ export default function Nav() {
               />
             </Link>
           </div>
-          
         )}
       </div>
     </nav>

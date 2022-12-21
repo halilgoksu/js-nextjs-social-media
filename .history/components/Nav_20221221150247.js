@@ -28,7 +28,7 @@ export default function Nav() {
         {user && (
           <div className="flex items-center gap-6">
             <Link href="/post">
-            <button className="bg-white btn btn-blue-500 hover:bg-blue-200 first-letter 
+            <button className="bg-white btn btn-blue-500 hover:bg-blue-700 first-letter 
              text-black font-bold py-2 px-4 rounded" type="submit">
         Submit
       </button>
