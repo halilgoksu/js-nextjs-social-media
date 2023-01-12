@@ -1,0 +1,16 @@
+
+export default function Message({ children, avatar, username, description }) {
+  return (
+    <div className="bg-indigo-400 p-8 m-2 border-b-2 rounded-lg w-2/3 flex-col items-center justify-center text-center">
+      <div className="flex items-center gap-2">
+        <img src={avatar} className="w-10 rounded-full" alt="image" />
+        <h2 className="border-2 ">{username}</h2>
+      </div>
+      <div className="py-4 bg-white">
+        <p>{description}</p>
+      </div>
+      console.log
+      {children}
+    </div>
+  );
+}
