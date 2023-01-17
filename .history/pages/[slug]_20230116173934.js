@@ -70,7 +70,7 @@ export default function Details() {
   //her router data hazir oldugunda calisir
 
   return (
-    <container className="flex  flex-col justify-center items-center w-full h-fit p-4 bg-indigo-400 ">
+    <container className="flex  flex-col justify-center items-center w-full h-fit p-4 ">
       <div
         className="w-2/3 max-w-lg  p-2 flex flex-col items-center justify-center text-center 
          gap-3  "
@@ -89,9 +89,7 @@ export default function Details() {
               onChange={(e) => setMessage(e.target.value)}
               type="text"
               value={message}
-              maxLength="50"
-
-              placeholder="..."
+              placeholder=""
             ></input>
             <p
               className={`font-medium text-xs ${

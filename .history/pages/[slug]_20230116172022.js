@@ -70,35 +70,33 @@ export default function Details() {
   //her router data hazir oldugunda calisir
 
   return (
-    <container className="flex  flex-col justify-center items-center w-full h-fit p-4 bg-indigo-400 ">
+    <container className="flex  flex-col justify-center items-center w-full h-full p-4 ">
       <div
         className="w-2/3 max-w-lg  p-2 flex flex-col items-center justify-center text-center 
-         gap-3  "
+         gap-3"
       >
         <Message {...routeData}></Message>
-        <div className="w-full  p-2 ">
+        <div className="w-full  p-2 border-4">
           {/* //Form start */}
           <div
             className="p-2  items-center justify-center text-center 
         border-2 rounded-lg border-purple-400"
           >
-            <h1 className="text-sm text-purple-900 w-full text-center p-2 ">Add comment</h1>
+            <h1 className="text-sm text-purple-900 w-full text-center p-2 "></h1>
             <input
-              className="bg-purple-700  text-white rounded-lg  text-xs resize-none w-full h-full 
-         border-2  border-purple-900 p-3"
+              className="bg-purple-700  text-white rounded-lg  text-xs resize-none w-full h-
+         border-2  border-purple-900 "
               onChange={(e) => setMessage(e.target.value)}
               type="text"
               value={message}
-              maxLength="50"
-
-              placeholder="..."
+              placeholder="Add comment "
             ></input>
             <p
               className={`font-medium text-xs ${
-                message.length > 45 ? "text-red-600" : "text-purple-900"
-              } text-center flex-auto justify-center items-center`}
+                "" > 90 ? "text-red-600" : "text-purple-900"
+              }`}
             >
-              {message.length}/50
+              /100
             </p>
             <button
               onClick={submitMessage}

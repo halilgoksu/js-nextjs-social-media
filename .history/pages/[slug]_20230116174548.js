@@ -89,8 +89,7 @@ export default function Details() {
               onChange={(e) => setMessage(e.target.value)}
               type="text"
               value={message}
-              maxLength="50"
-
+              input
               placeholder="..."
             ></input>
             <p

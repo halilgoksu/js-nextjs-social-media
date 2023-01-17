@@ -70,45 +70,50 @@ export default function Details() {
   //her router data hazir oldugunda calisir
 
   return (
-    <container className="flex  flex-col justify-center items-center w-full h-fit p-4 bg-indigo-400 ">
+    <container className="flex  flex-col justify-center items-center w-full h-fit p-4 ">
       <div
         className="w-2/3 max-w-lg  p-2 flex flex-col items-center justify-center text-center 
-         gap-3  "
+         gap-3"
       >
         <Message {...routeData}></Message>
-        <div className="w-full  p-2 ">
-          {/* //Form start */}
-          <div
-            className="p-2  items-center justify-center text-center 
+        <div className="w-full  p-2 border-4">
+        <div className="flex  flex-col justify-center items-center w-full h-fit p-4 ">
+      <form
+        onSubmit={submitPost}
+        className="w-2/3 max-w-lg  p-2  items-center justify-center text-center 
         border-2 rounded-lg border-purple-400"
-          >
-            <h1 className="text-sm text-purple-900 w-full text-center p-2 ">Add comment</h1>
-            <input
-              className="bg-purple-700  text-white rounded-lg  text-xs resize-none w-full h-full 
-         border-2  border-purple-900 p-3"
-              onChange={(e) => setMessage(e.target.value)}
-              type="text"
-              value={message}
-              maxLength="50"
-
-              placeholder="..."
-            ></input>
-            <p
-              className={`font-medium text-xs ${
-                message.length > 45 ? "text-red-600" : "text-purple-900"
-              } text-center flex-auto justify-center items-center`}
-            >
-              {message.length}/50
-            </p>
-            <button
-              onClick={submitMessage}
-              type="submit"
-              className=" bg-purple-900 text-white font-medium p-2 my-2 rounded-lg text-sm"
-            >
-              Submit
-            </button>
-          </div>
-          {/* //Form div done */}
+      >
+        <h1 className="text-sm text-purple-900 w-full text-center p-2 ">
+          {post.hasOwnProperty("id") ? "Edit your post" : "Write post"}
+          {/* //formun basligini duruma gore degistirmek icin kullanirz  
+                //eger postun bir id si varsa , post firebase de varsa yada yoksa 
+              */}
+        </h1>
+        <textarea 
+         className="bg-purple-700  text-white rounded-lg  text-xs resize-none w-full h-40 
+         border-2  border-purple-900 "
+          maxLength="100"
+          value={post.description}
+          onChange={
+            (e) => setPost({ ...post, description: e.target.value })
+            //butun postlari getir ve sadece postun descriptionunun girdigim value ile update et
+            //bunu her value degistiginde yap
+          }
+        ></textarea>
+        <p
+          className={`font-medium text-xs ${
+            post.description.length > 90 ? "text-red-600" : "text-purple-900"
+          }`}
+        >
+          {post.description.length}/100
+        </p>
+        <button
+          type="submit"
+          className=" bg-purple-900 text-white font-medium p-2 my-2 rounded-lg text-sm"
+        >
+          Submit
+        </button>
+      </form>
           <div className="py-6">
             <h2 className="font-bold ">Comments</h2>
             <hr />
@@ -125,9 +130,7 @@ export default function Details() {
                   />
                   <h2>{message.userName}</h2>
                 </div>
-                <h2 className="bg-purple-300 text-purple-900 py-2 rounded-md">
-                  {message.message}
-                </h2>
+                <h2 className="bg-purple-300 text-purple-900 py-2 rounded-md">{message.message}</h2>
               </div>
             ))}
           </div>
