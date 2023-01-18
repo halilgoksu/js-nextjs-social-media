@@ -13,6 +13,7 @@ import { toast } from "react-toastify";
 
 export default function Post() {
   const [post, setPost] = useState({ description: "" });
+  
 
   const [user, loading] = useAuthState(auth);
   const route = useRouter();
@@ -41,6 +42,7 @@ export default function Post() {
       const updatedPost = { ...post, timestamp: serverTimestamp() };
       await updateDoc(docRef, updatedPost);
       return route.push("/");
+     
     } else {
       //Make a new post
       const collectionRef = collection(db, "posts");
@@ -51,7 +53,7 @@ export default function Post() {
         avatar: user.photoURL,
         username: user.displayName,
       });
-
+      
       setPost({ description: "" });
       toast.success("Post has been made 🚀", {
         position: toast.POSITION.TOP_CENTER,
@@ -82,13 +84,21 @@ export default function Post() {
       >
         <h1 className="text-sm text-purple-900 w-full text-center p-2 ">
           {post.hasOwnProperty("id") ? "Edit your post" : "Write post"}
+          {/* //formun basligini duruma gore degistirmek icin kullanirz  
+                //eger postun bir id si varsa , post firebase de varsa yada yoksa 
+              */}
         </h1>
-        <textarea
-          className="textareainput bg-purple-700  text-white rounded-lg  text-xs resize-none w-full h-40  
+        <textarea 
+         className="textareainput bg-purple-700  text-white rounded-lg  text-xs resize-none w-full h-40  
          border-2  border-purple-900 outline-none p-4 "
           maxLength="100"
           value={post.description}
-          onChange={(e) => setPost({ ...post, description: e.target.value })}
+          
+          onChange={
+            (e) => setPost({ ...post, description: e.target.value })
+            //butun postlari getir ve sadece postun descriptionunun girdigim value ile update et
+            //bunu her value degistiginde yap
+          }
         ></textarea>
         <p
           className={`font-medium text-xs ${

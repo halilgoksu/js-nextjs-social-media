@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+//props olarak 
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>

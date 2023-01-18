@@ -57,6 +57,7 @@ export default function Dashboard() {
                   >
                     <BsTrash2Fill className="text-2xl" /> Delete
                   </button>
+                  {/* postu siler */}
                   <Link href={{ pathname: "/post", query: post }}>
                     <button className="text-teal-600 flex items-center justify-center  py-2 text-sm">
                       <AiFillEdit className="text-2xl" />

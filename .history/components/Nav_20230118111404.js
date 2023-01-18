@@ -2,11 +2,17 @@ import Link from "next/link";
 import { MdPostAdd } from "react-icons/md";
 import { GiAllSeeingEye } from "react-icons/gi";
 import { IoIosLogIn } from "react-icons/io";
+
 import { auth } from "../utils/firebase";
+
+
 import { useAuthState } from "react-firebase-hooks/auth";
+//userin olup olamdigini kontroll eder
 
 export default function Nav() {
   const [user, loading] = useAuthState(auth);
+  //auth ile login yapabilen bir state miz mevcut
+  //eger user yuklenirse user false olur 
   return (
     <nav className="smnavbar flex  flex-col justify-center items-center  bg-indigo-900  text-white  py-2 w-full ">
       <div className="flex justify-between">
@@ -17,6 +23,8 @@ export default function Nav() {
             <GiAllSeeingEye className="text-4xl homelogo" />
           </div>
         </Link>
+        {/* NextJS in guzelligi Root ile ugrasmana gerek yok Link arasina tikladiginda nereye gideceksen 
+       direk href in icine yaz o hallder */}
         <div className="flex empowering items-center  text-center justify-center">
           <p className="text-xs font-serif italic font-thin text-purple-400 ">
             Empowering voices, fostering understanding.
@@ -33,6 +41,9 @@ export default function Nav() {
               </div>
             </Link>
           )}
+          {/* //eger user yuklemedi ise sadece login iconunu renderla  
+             //icon a tiklarsan /auth/login componentine gidersin 
+          */}
 
           {user && (
             <div
@@ -54,6 +65,9 @@ export default function Nav() {
               </Link>
             </div>
           )}
+          {/* //eger user varsa userin logosunu ve ismini ve post comp render eder
+          //post yeni post yapar
+          //userin usten tiklayinca da dashboard a gider  */}
         </div>
       </div>
       <div className="empowerdown hidden items-center  text-center justify-center">
@@ -61,6 +75,7 @@ export default function Nav() {
           Empowering voices, fostering understanding.
         </p>
       </div>
+      {/* //eger ekran kuculurese gostercegim yazi  */}
     </nav>
   );
 }

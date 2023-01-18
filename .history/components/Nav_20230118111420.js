@@ -54,6 +54,9 @@ export default function Nav() {
               </Link>
             </div>
           )}
+          {/* //eger user varsa userin logosunu ve ismini ve post comp render eder
+          //post yeni post yapar
+          //userin usten tiklayinca da dashboard a gider  */}
         </div>
       </div>
       <div className="empowerdown hidden items-center  text-center justify-center">
@@ -61,6 +64,7 @@ export default function Nav() {
           Empowering voices, fostering understanding.
         </p>
       </div>
+      {/* //eger ekran kuculurese gostercegim yazi  */}
     </nav>
   );
 }

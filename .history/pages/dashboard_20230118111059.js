@@ -1,4 +1,5 @@
 import { auth, db } from "../utils/firebase";
+//auth sigout yapmak icinin kullancagiz
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -14,24 +15,34 @@ import Message from "../components/message";
 import { BsTrash2Fill } from "react-icons/bs";
 import { AiFillEdit } from "react-icons/ai";
 import Link from "next/link";
+//kendi logomuza tikladigmiz zaman geldigmiz dasboardimiz
 
 export default function Dashboard() {
   const route = useRouter();
+  //useRouter i route adi ile kullan
 
   const [user, loading] = useAuthState(auth);
+  //userin olup oladigina bakar
+  //user varsa loading false olur
 
   const [posts, setPosts] = useState([]);
+  //eger user yoksa postlari gosteme
 
   const getData = async () => {
     if (loading) return;
+    //eger user varsa bi sey yapma geri don
     if (!user) return route.push("/auth/login");
+    //user yoksa login comp git
     const collectionRef = collection(db, "posts");
+    //collectionlardan usrin postlarinini getir
     const q = query(collectionRef, where("user", "==", user.uid));
+    //uid userin id si, user ile user uid eslesiyorsa
     const unsubscribe = onSnapshot(q, (snapshot) => {
       setPosts(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
     return unsubscribe;
   };
+ 
 
   const deletePost = async (id) => {
     const docRef = doc(db, "posts", id);
@@ -44,7 +55,9 @@ export default function Dashboard() {
 
   return (
     <container className="flex  flex-col justify-center items-center w-full h-fit p-4">
-      <div className="dashboardxontainer w-2/3 max-w-lg  p-2 flex flex-col items-center justify-center text-center gap-2 ">
+      <div
+        className="dashboardxontainer w-2/3 max-w-lg  p-2 flex flex-col items-center justify-center text-center gap-2 "
+      >
         <h1 className="border-b-2 border-purple-300">Your posts</h1>
         <div className="w-full  flex flex-col items-center   text-center ">
           {posts.map((post) => {
@@ -57,6 +70,7 @@ export default function Dashboard() {
                   >
                     <BsTrash2Fill className="text-2xl" /> Delete
                   </button>
+                  {/* postu siler */}
                   <Link href={{ pathname: "/post", query: post }}>
                     <button className="text-teal-600 flex items-center justify-center  py-2 text-sm">
                       <AiFillEdit className="text-2xl" />

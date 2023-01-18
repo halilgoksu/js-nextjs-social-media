@@ -1,9 +1,11 @@
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
@@ -12,11 +14,14 @@ const firebaseConfig = {
   messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_APP_ID,
 };
+//hepsi firebase den gelir 
 
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
-
+// firebase bizm hem google ile kullanci olusturmamamizi 
+// provider ile kullanici girisi yapmamammiz saglar 
 
 export const db = getFirestore(app);
 

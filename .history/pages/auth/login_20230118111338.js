@@ -30,6 +30,7 @@ export default function Login() {
     } else {
     }
   }, [user]);
+  //user her degistiginde anasayfaya git 
 
 
   return (
@@ -46,6 +47,7 @@ export default function Login() {
           <FcGoogle className="text-2xl" />
           Sign in with Google
         </button>
+        {/* //uzerine tikladiginda GoogleLogin fonk calistir  */}
       </div>
     </div>
     </container>

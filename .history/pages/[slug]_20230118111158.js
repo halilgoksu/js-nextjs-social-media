@@ -14,6 +14,8 @@ import {
   updateDoc,
 } from "firebase/firestore";
 
+
+
 export default function Details() {
   const router = useRouter();
   const routeData = router.query;
@@ -33,7 +35,7 @@ export default function Details() {
       return;
     }
     const docRef = doc(db, "posts", routeData.id);
-
+    
     await updateDoc(docRef, {
       comments: arrayUnion({
         message,
@@ -53,11 +55,13 @@ export default function Details() {
     });
     return unsubscribe;
   };
+  
 
   useEffect(() => {
     if (!router.isReady) return;
     getComments();
   }, [router.isReady]);
+  //her router data hazir oldugunda calisir
 
   return (
     <container className="flex  flex-col justify-center items-center w-full h-fit p-4 bg-indigo-400 ">

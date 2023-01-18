@@ -14,6 +14,8 @@ import {
   updateDoc,
 } from "firebase/firestore";
 
+
+
 export default function Details() {
   const router = useRouter();
   const routeData = router.query;
@@ -22,6 +24,7 @@ export default function Details() {
 
   //Submit a message
   const submitMessage = async () => {
+    //Check if the user is logged
     if (!auth.currentUser) return router.push("/auth/login");
 
     if (!message) {
@@ -33,7 +36,8 @@ export default function Details() {
       return;
     }
     const docRef = doc(db, "posts", routeData.id);
-
+    //su anki postu al ve postun icine bir de comments ekle
+    //yeni bir array olusturur ve asagidaki objeyi arrayin icine atar
     await updateDoc(docRef, {
       comments: arrayUnion({
         message,
@@ -44,6 +48,7 @@ export default function Details() {
     });
     setMessage("");
   };
+  //arrayUnion firebaseden gelir yeni bir tane array olusturur
 
   //Get Comments
   const getComments = async () => {
@@ -53,11 +58,14 @@ export default function Details() {
     });
     return unsubscribe;
   };
+  //sanpshot sayfayi f5 yapmak  gorevini caktiramdan yapar
+  //aninda update icin kullanilir
 
   useEffect(() => {
     if (!router.isReady) return;
     getComments();
   }, [router.isReady]);
+  //her router data hazir oldugunda calisir
 
   return (
     <container className="flex  flex-col justify-center items-center w-full h-fit p-4 bg-indigo-400 ">

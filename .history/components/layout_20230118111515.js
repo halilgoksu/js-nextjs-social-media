@@ -1,5 +1,5 @@
 import Nav from "./Nav";
-import CreatedBy from "./CreatedBy";
+import CreatedBy from './CreatedBy'
 
 export default function Layout({ children }) {
   return (
@@ -9,6 +9,9 @@ export default function Layout({ children }) {
         {children}
         <CreatedBy />
       </main>
+  
     </div>
   );
 }
+
+

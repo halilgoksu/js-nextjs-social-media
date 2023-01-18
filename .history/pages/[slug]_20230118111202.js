@@ -14,6 +14,8 @@ import {
   updateDoc,
 } from "firebase/firestore";
 
+
+
 export default function Details() {
   const router = useRouter();
   const routeData = router.query;
@@ -33,7 +35,7 @@ export default function Details() {
       return;
     }
     const docRef = doc(db, "posts", routeData.id);
-
+    
     await updateDoc(docRef, {
       comments: arrayUnion({
         message,
@@ -53,6 +55,7 @@ export default function Details() {
     });
     return unsubscribe;
   };
+  
 
   useEffect(() => {
     if (!router.isReady) return;
@@ -67,7 +70,6 @@ export default function Details() {
       >
         <Message {...routeData}></Message>
         <div className="w-full  p-2 ">
-          {/* //Form start */}
           <div
             className="flex flex-col p-2  items-center justify-center text-center 
         border-2 rounded-lg border-purple-400 w-full"

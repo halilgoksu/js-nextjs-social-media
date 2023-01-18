@@ -61,6 +61,7 @@ export default function Nav() {
           Empowering voices, fostering understanding.
         </p>
       </div>
+      {/* //eger ekran kuculurese gostercegim yazi  */}
     </nav>
   );
 }

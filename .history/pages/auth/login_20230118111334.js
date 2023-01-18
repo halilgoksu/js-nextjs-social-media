@@ -23,13 +23,20 @@ export default function Login() {
       console.log(error);
     }
   };
+  // Firebase Authentication library's signInWithPopup method to sign 
+  // the user in with their Google account, and then redirecting them 
+  // to the homepage ("/") using the route.push method. The auth variable 
+  // is likely a reference to the Firebase Authentication instance, 
+  
 
   useEffect(() => {
     if (user) {
       route.push("/");
     } else {
+      //console.log("login");
     }
   }, [user]);
+  //user her degistiginde anasayfaya git 
 
 
   return (
@@ -46,6 +53,7 @@ export default function Login() {
           <FcGoogle className="text-2xl" />
           Sign in with Google
         </button>
+        {/* //uzerine tikladiginda GoogleLogin fonk calistir  */}
       </div>
     </div>
     </container>
