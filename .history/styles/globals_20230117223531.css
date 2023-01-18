@@ -53,6 +53,7 @@ a {
   width: auto;
   font-size: medium;
   resize: vertical;
+  height: fit-content;
   
 
   

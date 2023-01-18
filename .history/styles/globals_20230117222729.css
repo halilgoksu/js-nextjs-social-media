@@ -50,9 +50,7 @@ a {
   width: 100%;
 }
 .textareainput{
-  width: auto;
-  font-size: medium;
-  resize: vertical;
+  display: flex;
   
 
   

@@ -103,8 +103,8 @@ export default function Post() {
               */}
         </h1>
         <textarea 
-         className="textareainput bg-purple-700  text-white rounded-lg  text-xs resize-none w-full h-40  
-         border-2  border-purple-900 outline-none p-4 "
+         className="textareainput bg-purple-700  text-white rounded-lg  text-xs  w-full h-40 blur-none
+         border-2  border-purple-900 "
           maxLength="100"
           value={post.description}
           

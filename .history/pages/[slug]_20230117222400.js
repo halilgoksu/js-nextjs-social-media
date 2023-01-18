@@ -87,7 +87,7 @@ export default function Details() {
             </h1>
             <input
               className="sluginput  bg-purple-700  text-white rounded-lg  text-sm  w-full  h-fit
-         border-2  border-purple-900 p-3 "
+         border-2  border-purple-900 p-3 overflow"
               onChange={(e) => setMessage(e.target.value)}
               type="text"
               value={message}

@@ -50,16 +50,16 @@ a {
   width: 100%;
 }
 .textareainput{
-  width: auto;
-  font-size: medium;
-  resize: vertical;
+  display: flex;
   
 
   
 }
 .sluginput{
   overflow: scroll;
+  display: flex;
   width: 100%;
+  height: 40rem;
   font-size:medium;
 
   

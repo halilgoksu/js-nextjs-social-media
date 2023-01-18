@@ -86,20 +86,20 @@ export default function Details() {
               Add comment
             </h1>
             <input
-              className="sluginput  bg-purple-700  text-white rounded-lg  text-sm  w-full  h-fit
+              className="sluginput  bg-purple-700  text-white rounded-lg  text-sm    h-fit
          border-2  border-purple-900 p-3 "
               onChange={(e) => setMessage(e.target.value)}
               type="text"
               value={message}
-              maxLength="50"
+              maxLength="100"
               placeholder="..."
             ></input>
             <p
               className={`font-medium text-xs ${
-                message.length > 45 ? "text-red-600" : "text-purple-900"
+                message.length > 90 ? "text-red-600" : "text-purple-900"
               } text-center flex-auto justify-center items-center`}
             >
-              {message.length}/50
+              {message.length}/100
             </p>
             <button
               onClick={submitMessage}

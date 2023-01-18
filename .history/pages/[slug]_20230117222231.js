@@ -96,7 +96,7 @@ export default function Details() {
             ></input>
             <p
               className={`font-medium text-xs ${
-                message.length > 45 ? "text-red-600" : "text-purple-900"
+                message.length > 50 ? "text-red-600" : "text-purple-900"
               } text-center flex-auto justify-center items-center`}
             >
               {message.length}/50
