@@ -60,7 +60,7 @@ export default function Dashboard() {
   return (
     <container className="flex  flex-col justify-center items-center w-full h-fit p-4">
       <div
-        className="dashboardxontainer w-2/3 max-w-lg  p-2 flex flex-col items-center justify-center text-center gap-2 "
+        className="dasboardxontainer w-2/3 max-w-lg  p-2 flex flex-col items-center justify-center text-center gap-2 "
       >
         <h1 className="border-b-2 border-purple-300">Your posts</h1>
         <div className="w-full  flex flex-col items-center   text-center ">

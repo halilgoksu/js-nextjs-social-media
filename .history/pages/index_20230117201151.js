@@ -38,7 +38,7 @@ export default function Home() {
         <link rel="icon" href="" />
       </Head>
 
-      <div  className="indexhome w-2/3 max-w-lg  p-3 flex flex-col items-center text-center  gap-4 h-full ">
+      <div  className="sma w-2/3 max-w-lg  p-3 flex flex-col items-center text-center  gap-4 h-full ">
         {allPosts.map((post) => (
           <Message key={post.id} {...post}>
             <Link href={{ pathname: `/${post.id}`, query: { ...post } }}>

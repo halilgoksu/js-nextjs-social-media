@@ -22,30 +22,20 @@ a {
 
 
 @media screen and (max-width: 480px) {
- 
+  .post-logo{
+    /* flex-direction: column-reverse;
+    width: auto;
+    font-size: small;
+    gap: 0.5rem; */
+
+  }
   .empowering{
     display:none;
   }
   .empowerdown{
     display: block;
   }
-.indexhome{
-  width:100%;
-}
-.smnavbar{
-  width: 100%;
-  font-weight: bold;
-  font-size:x-large;
-}
-.homelogo{
-  font-size:4rem;
-}
-.postcontainer{
-  width: 100%;
-}
-.dashboardxontainer{
-  width: 100%;
-}
+
 
 
 }

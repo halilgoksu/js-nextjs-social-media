@@ -16,7 +16,7 @@ export default function Nav() {
   //eger user yuklenirse user false olur 
   return (
     <nav className="smnavbar flex  flex-col justify-center items-center  bg-indigo-900  text-white  py-2 w-full ">
-      <div className="flex justify-between">
+      <div className="flex  gap-5">
         <Link href="/">
           <div
             className="cursor-pointer flex flex-col items-center text-center p-1 bg-purple-800 m-2
@@ -27,7 +27,7 @@ export default function Nav() {
         {/* NextJS in guzelligi Root ile ugrasmana gerek yok Link arasina tikladiginda nereye gideceksen 
        direk href in icine yaz o hallder */}
         <div className="flex empowering items-center  text-center justify-center">
-          <p className="text-xs font-serif italic font-thin text-purple-400 ">
+          <p className="text-xs font-serif italic font-thin text-purple-400 text-center text-br">
             Empowering voices, fostering understanding.
           </p>
         </div>

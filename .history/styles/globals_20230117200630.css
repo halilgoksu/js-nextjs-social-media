@@ -29,22 +29,8 @@ a {
   .empowerdown{
     display: block;
   }
-.indexhome{
-  width:100%;
-}
-.smnavbar{
-  width: 100%;
-  font-weight: bold;
-  font-size:x-large;
-}
-.homelogo{
-  font-size:4rem;
-}
-.postcontainer{
-  width: 100%;
-}
-.dashboardxontainer{
-  width: 100%;
+.container{
+  width: full;
 }
 
 

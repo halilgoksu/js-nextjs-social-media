@@ -27,7 +27,7 @@ export default function Nav() {
         {/* NextJS in guzelligi Root ile ugrasmana gerek yok Link arasina tikladiginda nereye gideceksen 
        direk href in icine yaz o hallder */}
         <div className="flex empowering items-center  text-center justify-center">
-          <p className="text-xs font-serif italic font-thin text-purple-400 ">
+          <p className="text-xs font-serif italic font-thin text-purple-400 w-2/3">
             Empowering voices, fostering understanding.
           </p>
         </div>
