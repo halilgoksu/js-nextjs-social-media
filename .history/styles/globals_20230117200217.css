@@ -36,8 +36,10 @@ a {
     display: block;
   }
   .username{
+    font-size: small;
   }
   .description{
+    font-size: xx-small;
   }
   .comments{
   }

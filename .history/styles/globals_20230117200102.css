@@ -34,12 +34,16 @@ a {
   }
   .empowerdown{
     display: block;
+    font-size: 1rem;
   }
   .username{
+    font-size: small;
   }
   .description{
+    font-size: xx-small;
   }
   .comments{
+    font-size: small;
   }
 
 

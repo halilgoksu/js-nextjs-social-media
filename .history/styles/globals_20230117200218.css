@@ -36,6 +36,7 @@ a {
     display: block;
   }
   .username{
+    font-size: small;
   }
   .description{
   }

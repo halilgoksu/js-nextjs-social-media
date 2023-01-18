@@ -3,7 +3,7 @@ import CreatedBy from './CreatedBy'
 
 export default function Layout({ children }) {
   return (
-    <div className="container items-center justify-center text-center  bg-indigo-400 h-screen">
+    <div className="items-center justify-center text-center  bg-indigo-400 h-screen  sm:text-">
       <Nav />
       <main className=" flex h-full w-full flex-col   bg-indigo-400">
         {children}
