@@ -85,11 +85,12 @@ export default function Details() {
             <h1 className="text-sm text-purple-900 w-full text-center p-2 ">Add comment</h1>
             <input
               className="bg-purple-700  text-white rounded-lg  text-xs resize-none w-full h-full 
-         border-2  border-purple-900 p-3"
+         border-2  border-purple-900 p-3 break-normal"
               onChange={(e) => setMessage(e.target.value)}
               type="text"
               value={message}
               maxLength="50"
+              
 
               placeholder="..."
             ></input>

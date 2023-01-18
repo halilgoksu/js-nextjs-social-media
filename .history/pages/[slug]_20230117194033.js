@@ -90,6 +90,7 @@ export default function Details() {
               type="text"
               value={message}
               maxLength="50"
+              
 
               placeholder="..."
             ></input>
