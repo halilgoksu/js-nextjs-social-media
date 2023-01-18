@@ -72,7 +72,7 @@ export default function Details() {
   return (
     <container className="flex  flex-col justify-center items-center w-full h-fit p-4 bg-indigo-400 ">
       <div
-        className="w-2/3 max-w-lg  p-2 flex flex-col items-center justify-center text-center 
+        className="slugw-2/3 max-w-lg  p-2 flex flex-col items-center justify-center text-center 
          gap-3  "
       >
         <Message {...routeData}></Message>

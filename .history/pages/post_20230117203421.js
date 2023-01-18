@@ -103,11 +103,11 @@ export default function Post() {
               */}
         </h1>
         <textarea 
-         className="bg-purple-700  text-white rounded-lg  text-xs resize-none w-full h-40 blur-none
+         className="bg-purple-700  text-white rounded-lg  text-xs resize-none w-full h-40 
          border-2  border-purple-900 "
           maxLength="100"
           value={post.description}
-          
+          onFocus=
           onChange={
             (e) => setPost({ ...post, description: e.target.value })
             //butun postlari getir ve sadece postun descriptionunun girdigim value ile update et
