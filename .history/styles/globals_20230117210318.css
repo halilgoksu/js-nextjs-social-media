@@ -50,14 +50,8 @@ a {
   width: 100%;
 }
 .textareainput{
-  padding: 0.7rem;
+  padding: 1rem;
   width:auto;
-  
-}
-.sluginput{
-  display: inline;
-  resize:vertical;
-  
 }
 
 

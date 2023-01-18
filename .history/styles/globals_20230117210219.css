@@ -16,10 +16,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 
 @media screen and (max-width: 480px) {
  
@@ -50,14 +46,7 @@ a {
   width: 100%;
 }
 .textareainput{
-  padding: 0.7rem;
-  width:auto;
-  
-}
-.sluginput{
-  display: inline;
-  resize:vertical;
-  
+  width: fit-content;
 }
 
 

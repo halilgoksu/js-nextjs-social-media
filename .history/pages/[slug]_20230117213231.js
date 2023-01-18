@@ -80,7 +80,7 @@ export default function Details() {
           {/* //Form start */}
           <div
             className="p-2  items-center justify-center text-center 
-        border-2 rounded-lg border-purple-400 "
+        border-2 rounded-lg border-purple-400 w-full"
           >
             <h1 className="text-sm text-purple-900 w-full text-center p-2 ">Add comment</h1>
             <input  inputMode=""

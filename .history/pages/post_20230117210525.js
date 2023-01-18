@@ -102,7 +102,7 @@ export default function Post() {
                 //eger postun bir id si varsa , post firebase de varsa yada yoksa 
               */}
         </h1>
-        <textarea 
+        <textarea in
          className="textareainput bg-purple-700  text-white rounded-lg  text-xs resize-none w-full h-40 blur-none
          border-2  border-purple-900 "
           maxLength="100"

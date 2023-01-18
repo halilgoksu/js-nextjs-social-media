@@ -80,16 +80,19 @@ export default function Details() {
           {/* //Form start */}
           <div
             className="p-2  items-center justify-center text-center 
-        border-2 rounded-lg border-purple-400 "
+        border-2 rounded-lg border-purple-400"
           >
             <h1 className="text-sm text-purple-900 w-full text-center p-2 ">Add comment</h1>
-            <input  inputMode=""
-              className="sluginput bg-purple-700  text-white rounded-lg  text-xs resize-none w-full  
-         border-2  border-purple-900 p-3 "
+            <input sluginput inputMode=""
+              className="bg-purple-700  text-white rounded-lg  text-xs resize-none w-full h-full 
+         border-2  border-purple-900 p-3 break-words"
               onChange={(e) => setMessage(e.target.value)}
               type="text"
               value={message}
               maxLength="100"
+
+              
+
               placeholder="..."
             ></input>
             <p
@@ -124,7 +127,7 @@ export default function Details() {
                   />
                   <h2>{message.userName}</h2>
                 </div>
-                <h2 className="bg-purple-300 text-purple-900 py-2 rounded-md break-words text-left p-2">
+                <h2 className="bg-purple-300 text-purple-900 py-2 rounded-md break-words">
                   {message.message}
                 </h2>
               </div>
