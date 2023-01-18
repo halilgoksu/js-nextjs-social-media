@@ -74,7 +74,7 @@ export default function Post() {
   }, [user, loading]);
 
   return (
-    <div className=" flex  flex-col justify-center items-center w-full h-fit p-4 ">
+    <container className=" flex  flex-col justify-center items-center w-full h-fit p-4 ">
       <form
         onSubmit={submitPost}
         className="postcontainer w-2/3 max-w-lg  p-2  items-center justify-center text-center 
@@ -104,6 +104,6 @@ export default function Post() {
           Submit
         </button>
       </form>
-    </div>
+    </container>
   );
 }

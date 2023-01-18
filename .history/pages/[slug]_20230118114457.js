@@ -62,7 +62,7 @@ export default function Details() {
   return (
     <div className="flex  flex-col justify-center items-center w-full h-fit p-4 bg-indigo-400 ">
       <div
-        className="commentscontainer w-2/3 max-w-lg  p-2 flex flex-col items-center justify-center text-center 
+        className="comments w-2/3 max-w-lg  p-2 flex flex-col items-center justify-center text-center 
          gap-3  "
       >
         <Message {...routeData}></Message>

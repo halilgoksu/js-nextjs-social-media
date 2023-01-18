@@ -77,7 +77,7 @@ export default function Post() {
     <div className=" flex  flex-col justify-center items-center w-full h-fit p-4 ">
       <form
         onSubmit={submitPost}
-        className="postcontainer w-2/3 max-w-lg  p-2  items-center justify-center text-center 
+        className=" w-2/3 max-w-lg  p-2  items-center justify-center text-center 
         border-2 rounded-lg border-purple-400"
       >
         <h1 className="text-sm text-purple-900 w-full text-center p-2 ">
